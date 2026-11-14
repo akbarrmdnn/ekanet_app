@@ -3,14 +3,16 @@ class Barang {
   final String nama;
   final String kategori;
   final int stok;
-  final double harga;
+  final double hargaSatuan;
 
   Barang({
     required this.id,
     required this.nama,
     required this.kategori,
     required this.stok,
-    required this.harga
+    required this.hargaSatuan,
   });
+
+  double get totalHarga => stok * hargaSatuan;
 } 
 
